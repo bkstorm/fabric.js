@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="/dist/fabric.js"></script>
+        <script src="/src/shapes/curved-text.class.js"></script>
+        <script src="/src/shapes/vertical-text.class.js"></script>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+    </body>
+    <script>
+        let canvas = new fabric.Canvas('canvas', {
+            width: 2000,
+            height: 1000,
+        });
+
+        let text = new fabric.Text('hello\n\nbonjour', {
+            left: 0,
+            top: 100,
+        });
+        let verticalText = new fabric.VerticalText('hello\n\nbonjour', {
+            left: 200,
+            top: 100,
+        });
+        let curvedText1 = new fabric.CurvedText('dong 1\ndong 2', {
+            left: 400,
+            top: 100,
+            textAlign: 'center',
+            radius: 200,
+        });
+        let curvedText2 = new fabric.CurvedText('hello world\nviet nam', {
+          left: 700,
+          top: 100,
+          textAlign: 'center',
+          radius: 200,
+        });
+
+        canvas.add(text);
+        canvas.add(verticalText);
+        canvas.add(curvedText1);
+        // canvas.add(curvedText2);
+    </script>
+</html>
